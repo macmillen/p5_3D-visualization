@@ -605,19 +605,19 @@ let mode2Image;
 let colorModeWhiteImage;
 let colorModeSplashImage;
 function preload() {
-    font = loadFont('../assets/fonts/arial.ttf');
-    spheresImage = loadImage('../assets/images/spheres.png');
-    facesImage = loadImage('../assets/images/faces.png');
-    spinningImage = loadImage('../assets/images/spinning.png');
-    linesImage = loadImage('../assets/images/lines.png');
-    plusXImage = loadImage('../assets/images/plus_x.png');
-    plusYImage = loadImage('../assets/images/plus_y.png');
-    minusXImage = loadImage('../assets/images/minus_x.png');
-    minusYImage = loadImage('../assets/images/minus_y.png');
-    mode1Image = loadImage('../assets/images/mode_1.png');
-    mode2Image = loadImage('../assets/images/mode_2.png');
-    colorModeWhiteImage = loadImage('../assets/images/color_mode_white.png');
-    colorModeSplashImage = loadImage('../assets/images/color_mode_splash.png');
+    font = loadFont("assets/fonts/arial.ttf");
+    spheresImage = loadImage("assets/images/spheres.png");
+    facesImage = loadImage("assets/images/faces.png");
+    spinningImage = loadImage("assets/images/spinning.png");
+    linesImage = loadImage("assets/images/lines.png");
+    plusXImage = loadImage("assets/images/plus_x.png");
+    plusYImage = loadImage("assets/images/plus_y.png");
+    minusXImage = loadImage("assets/images/minus_x.png");
+    minusYImage = loadImage("assets/images/minus_y.png");
+    mode1Image = loadImage("assets/images/mode_1.png");
+    mode2Image = loadImage("assets/images/mode_2.png");
+    colorModeWhiteImage = loadImage("assets/images/color_mode_white.png");
+    colorModeSplashImage = loadImage("assets/images/color_mode_splash.png");
 }
 function setup() {
     settings = new Settings();
@@ -635,7 +635,7 @@ function windowResized() {
 function draw() {
     background(20);
     hud.draw();
-    buttons.forEach(b => b.onHover());
+    buttons.forEach((b) => b.onHover());
     cam.translate();
     drawAxises();
     switch (settings.shape) {
@@ -659,8 +659,8 @@ function mouseReleased() {
     }
 }
 function mouseClicked() {
-    buttons.forEach(b => b.onClick());
-    _scrollbars.forEach(s => s.onClick());
+    buttons.forEach((b) => b.onClick());
+    _scrollbars.forEach((s) => s.onClick());
 }
 function updateInputs() {
     if (mouseIsPressed) {
